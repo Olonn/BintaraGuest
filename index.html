@@ -81,9 +81,8 @@
         function checkPassword() {
             var password = document.getElementById("password").value;
             if (password === "8558GU3St#") {
-                // Allow connection, redirection is handled by FitExpress
-                alert("Login successful. Redirecting...");
-                // Replace with code to allow internet access if needed (FitExpress does this)
+                // Let FitExpress handle the redirection
+                alert("Login successful. You will be redirected to the internet.");
             } else {
                 alert("Incorrect password. Please try again.");
             }
@@ -98,7 +97,7 @@
 </head>
 <body>
     <div class="login-container">
-        <img src="https://i.postimg.cc/VvZYRqS1/Bintara-Solutions-logo.png" alt="Bintara Solutions Logo">
+        <img src="https://raw.githubusercontent.com/olonn/BintaraGuest/main/logo.png" alt="Bintara Solutions Logo">
         <h2>Welcome to Bintara Solutions</h2>
         <p>By continuing, you agree to the terms and conditions.</p>
         <input type="password" id="password" placeholder="Enter Password">
@@ -108,7 +107,7 @@
         </div>
         <button id="loginButton" onclick="checkPassword()" disabled>Continue to internet</button>
         <div class="footer">
-            <p>Terms and Conditions: By using our internet service, you hereby expressly acknowledge and agree that there are significant security, privacy, and confidentiality risks inherent in accessing or transmitting information through the internet, whether the connection is facilitated through wired or wireless technology.</p>
+            <p>Terms and Conditions: By using our internet service, you acknowledge and agree to the inherent security, privacy, and confidentiality risks of internet use.</p>
         </div>
     </div>
 </body>
