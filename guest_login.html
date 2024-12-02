@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Bintara Solutions</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link the JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://i.postimg.cc/VvZYRqS1/Bintara-Solutions-logo.png" alt="Bintara Solutions Logo">
+        <h2>Welcome to Bintara Solutions</h2>
+        <p>By continuing, you agree to the terms and conditions.</p>
+        <input type="password" id="password" placeholder="Enter Password">
+        <div class="terms">
+            <input type="checkbox" id="terms" onclick="toggleButton()">
+            <label for="terms">I agree to the terms and conditions</label>
+        </div>
+        <button id="loginButton" onclick="checkPassword()" disabled>Continue to internet</button>
+        <div class="footer">
+            <p>Terms and Conditions: By using our internet service, you hereby expressly acknowledge and agree that there are significant security, privacy and confidentiality risks inherent in accessing or transmitting information through the internet, whether the connection is facilitated through wired or wireless technology.</p>
+        </div>
+    </div>
+</body>
+</html>
