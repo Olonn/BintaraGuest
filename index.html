@@ -78,15 +78,17 @@
         }
     </style>
     <script>
-        function checkPassword() {
-            var password = document.getElementById("password").value;
-            if (password === "8558GU3St#") {
-                // Let FitExpress handle the redirection
-                alert("Login successful. You will be redirected to the internet.");
-            } else {
-                alert("Incorrect password. Please try again.");
-            }
-        }
+        
+       function checkPassword() {
+    var password = document.getElementById("password").value;
+    if (password === "8558GU3St#") {
+        // Redirect to the router's success handler
+        alert("Login successful. Connecting to the internet...");
+        window.location.href = "/success.html";
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+}
 
         function toggleButton() {
             var checkbox = document.getElementById("terms");
