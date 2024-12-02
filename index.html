@@ -79,16 +79,16 @@
     </style>
     <script>
         
-       function checkPassword() {
+  function checkPassword() {
     var password = document.getElementById("password").value;
     if (password === "8558GU3St#") {
-        // Redirect to the router's success handler
         alert("Login successful. Connecting to the internet...");
-        window.location.href = "/success.html";
+        // Let the controller redirect; no hardcoded redirection here.
     } else {
         alert("Incorrect password. Please try again.");
     }
 }
+
 
         function toggleButton() {
             var checkbox = document.getElementById("terms");
