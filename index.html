@@ -78,22 +78,32 @@
         }
     </style>
     <script>
-        
-  function checkPassword() {
-    var password = document.getElementById("password").value;
-    if (password === "8ss8GU3St#") {
-        alert("Login successful. Connecting to the internet...");
-        // Let the controller redirect; no hardcoded redirection here.
-    } else {
-        alert("Incorrect password. Please try again.");
-    }
-}
-
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "8ss8GU3St#") {
+                alert("Login successful. Connecting to the internet...");
+                // Let the controller redirect; no hardcoded redirection here.
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
 
         function toggleButton() {
             var checkbox = document.getElementById("terms");
             var button = document.getElementById("loginButton");
             button.disabled = !checkbox.checked;
+        }
+
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var toggleButton = document.getElementById("togglePassword");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleButton.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                toggleButton.textContent = "Show";
+            }
         }
     </script>
 </head>
@@ -103,6 +113,7 @@
         <h2>Welcome to Bintara Solutions</h2>
         <p>By continuing, you agree to the terms and conditions.</p>
         <input type="password" id="password" placeholder="Enter Password">
+        <button id="togglePassword" onclick="togglePasswordVisibility()">Show</button>
         <div class="terms">
             <input type="checkbox" id="terms" onclick="toggleButton()">
             <label for="terms">I agree to the terms and conditions</label>
